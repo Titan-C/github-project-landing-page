@@ -141,3 +141,8 @@ p.copyright {
 .github-btn {
     margin-top: 10px;
 }
+
+pre {
+    background-color: #ddd;
+    padding: 2em;
+}
