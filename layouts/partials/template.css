@@ -1,12 +1,10 @@
-.navbar {
-    border-color: {{ .Site.Params.first_border_color }};
-}
-
-.content-section-a,
+.content-striped:nth-of-type(odd),
 footer,
 .navbar {
   background-color: {{ .Site.Params.first_color }};
   color: {{ .Site.Params.first_text_color }};
+  border-top: 1px solid {{ .Site.Params.first_border_color }};
+  border-bottom: 1px solid {{ .Site.Params.first_border_color }};
 }
 
 .navbar a:link,
@@ -19,7 +17,7 @@ footer,
   color: {{ .Site.Params.header_link_hover_color }};
 }
 
-.content-section-b {
+.content-striped {
   background-color: {{ .Site.Params.second_color }};
   color: {{ .Site.Params.second_text_color }};
 }
