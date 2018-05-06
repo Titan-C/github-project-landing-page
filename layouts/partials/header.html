@@ -1,31 +1,27 @@
 <section id="intro">
-	<!-- Header -->
-	<div class="intro-header">
+  <!-- Header -->
+  <div class="intro-header">
+    <div class="container header-container">
+      <div class="row">
+        <div class="col-md">
+          <img src="{{ .Site.Params.logo }}" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md">
+          <h1>{{ .Site.Title }}</h1>
+          <h3>{{ .Site.Params.description }}</h3>
 
-		<div class="container header-container">
+          {{ if (isset .Site.Params "github_project_name") }}
+          {{ $user := .Site.Params.github_user_name }}
+          {{ $repo := .Site.Params.github_project_name }}
 
-			<div class="row">
-			  <div class="col-md">
-                            <img src="{{ .Site.Params.logo }}" class="img-fluid" alt="Responsive image">
-                          </div>
-				<div class="col-md">
-					<h1>{{ .Site.Title }}</h1>
-					<h3>{{ .Site.Params.description }}</h3>
+          <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user={{ $user }}&repo={{ $repo  }}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          {{ end }}
 
-					{{ if (isset .Site.Params "github_project_name") }}
-					{{ $user := .Site.Params.github_user_name }}
-					{{ $repo := .Site.Params.github_project_name }}
-
-					<iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user={{ $user }}&repo={{ $repo  }}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-					{{ end }}
-
-					<hr class="intro-divider">
-				</div>
-			</div>
-
-		</div>
-		<!-- /.container -->
-
-	</div>
-	<!-- /.intro-header -->
+          <hr class="intro-divider">
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.intro-header -->
 </section>
